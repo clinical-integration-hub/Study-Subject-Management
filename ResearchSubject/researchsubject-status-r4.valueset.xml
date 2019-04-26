@@ -1,0 +1,87 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2017-11-28T08:39:57Z"/>
+		<profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+	</meta>
+	<url value="http://clinicalsite.org/fhir/ValueSet/research-subject-status"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.4.642.3.804"/>
+	</identifier>
+	<version value="3.0.1"/>
+	<name value="ResearchSubjectStatus-R4"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<date value="2017-04-27T17:09:41+10:00"/>
+	<immutable value="true"/>
+	<expansion>
+		<identifier value="urn:uuid:3e9ea36c-6699-40d9-83a5-2bfec028582e"/>
+		<timestamp value="2017-12-20T13:21:05Z"/>     
+		<contains>           
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="candidate"/>
+			<display value="Candidate"/>
+		</contains>
+		<contains>          
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="eligible"/>
+			<display value="Eligible"/>
+		</contains>
+		<contains>           
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="follow-up"/>
+			<display value="Follow-up"/>
+		</contains>
+		<contains>           
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="ineligible"/>
+			<display value="Ineligible"/>
+		</contains>
+		<contains>           
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="not-registered"/>
+			<display value="Not registered"/>
+		</contains>
+		<contains>        
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="on-study"/>
+			<display value="On-study"/>
+		</contains>
+		<contains>        
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="off-study"/>
+			<display value="Off-study"/>
+		</contains>
+		<contains>        
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="on-study-intervention"/>
+			<display value="On-study-intervention"/>
+		</contains>
+		<contains>        
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="on-study-observation"/>
+			<display value="On-study-observation"/>
+		</contains>
+		<contains>        
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="pending-on-study"/>
+			<display value="Pending on-study"/>
+		</contains>
+		<contains>        
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="potential-candidate"/>
+			<display value="Potential Candidate"/>
+		</contains>
+		<contains>        
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="screening"/>
+			<display value="Screening"/>
+		</contains>
+		<contains>        
+			<system value="http://hl7.org/fhir/research-subject-status"/>
+			<code value="withdrawn"/>
+			<display value="Withdrawn"/>
+		</contains>
+	</expansion>
+</ValueSet>

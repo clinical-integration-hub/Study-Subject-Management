@@ -1,0 +1,23 @@
+<Patient xmlns="http://hl7.org/fhir">
+	<id value="patient-soa-1"/>
+	<meta>
+		<profile value="http://clinicalsite.org/fhir/StructureDefinition/patient-soa" />
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/v2/0203" />
+				<code value="MR" />
+			</coding>
+		</type>
+		<system value="http://uk-koeln.de" />
+		<value value="5885975" />
+	</identifier>
+	<active value="true" />
+	<name>
+		<family value="Mustermann" />
+		<given value="Barbara" />
+	</name>
+	<gender value="female" />
+	<birthDate value="1941-06-15" />
+</Patient>

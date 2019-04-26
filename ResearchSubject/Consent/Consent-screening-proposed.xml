@@ -1,0 +1,29 @@
+<Consent xmlns="http://hl7.org/fhir">
+		<text> 
+		<status value="generated"/> 
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h>Example Screening Consent (proposed)</h>
+		</div> 
+	</text> 
+	<id value="consent-screening-proposed"/>
+	<meta>
+		<profile value="http://clinicalsite.org/fhir/StructureDefinition/consent-soa" />
+	</meta>
+	<status value="proposed"/>
+	<category>
+		<coding>
+			<system value="http://hl7.org/fhir/consentcategorycodes" />
+			<code value="RESEARCH" />
+		</coding>
+	</category>
+	<patient>
+		<reference value="Patient/patient-soa-1"/>
+	</patient>
+	<dateTime value="2018-01-10"/>
+	<purpose>
+		<coding>
+			<system value="http://hl7.org/fhir/v3/ActReason"/>
+			<code value="PRECLINTRCH"/>
+		</coding>
+	</purpose>
+</Consent>

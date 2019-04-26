@@ -1,0 +1,18 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+	<name value="site-identifier"/>
+	<status value="draft"/>
+	<kind value="identifier"/>
+	<date value="2017-09-15"/>
+	<publisher value="Clinicalsite.org" />
+	<description
+			value="Identifier for research sites"/>
+	<usage value=""/>
+	<uniqueId>
+		<type value="uri"/>
+		<value value="http://clinicalsite.org/fhir/NamingSystem/site-identifier"/>
+		<preferred value="true"/>
+		<period>
+			<start value="2017-12-14"/>
+		</period>
+	</uniqueId>
+</NamingSystem>

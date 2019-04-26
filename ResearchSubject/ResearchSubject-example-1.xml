@@ -1,0 +1,48 @@
+<ResearchSubject xmlns="http://hl7.org/fhir">
+	<id value="researchsubject-soa-1"/>
+	<meta>
+		<profile value="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-soa" />
+	</meta>
+	<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-status-history">
+		<extension url="status">
+			<valueCode value="potential-candidate"/>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2017-12-01"/>
+			</valuePeriod>
+		</extension>
+	</extension>
+	<identifier>
+		<type>
+		<coding>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-identifier-type" />
+			<code value="SCREEN" />
+			</coding>
+		</type>
+		<system value="http://clinicalsite.org/fhir/NamingSystem/[sponsor-id]/screening-identifier"/>
+		<value value="1973"/>
+	</identifier>
+	<!--
+	<identifier>
+		<type>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-identifier-type" />
+			<code value="SUBJ" />
+		</type>
+		<system value="http://clinicalsite.org/fhir/NamingSystem/[sponsor-id]/researchsubject-identifier"/>
+		<value value="5467"/>
+	</identifier>
+	-->
+	<status value="candidate"/>
+	<period>
+		<start value="2017-12-01"/>
+	</period>
+	<study>
+		<reference value="ResearchStudy/researchstudy-soa-1"/>
+	</study>
+	<individual>
+		<reference value="Patient/patient-soa-1"/>
+	</individual>
+</ResearchSubject>
+
+

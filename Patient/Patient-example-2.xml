@@ -1,0 +1,24 @@
+<Patient xmlns="http://hl7.org/fhir">
+	<id value="patient-soa-2"/>
+  <meta>
+    <profile value="http://clinicalsite.org/fhir/StructureDefinition/patient-soa" />
+	<profile value="http://fhir.de/StructureDefinition/patient-de-basis" />
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203" />
+        <code value="MR" />
+      </coding>
+    </type>
+    <system value="http://uk-koeln.de/NamingSystem/patient-identifier" />
+    <value value="5204266" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Mustermann" />
+    <given value="Thomas" />
+  </name>
+  <gender value="male" />
+  <birthdate value="1989-07-06" />
+</Patient>

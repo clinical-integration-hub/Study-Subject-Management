@@ -1,0 +1,47 @@
+<ResearchSubject xmlns="http://hl7.org/fhir">
+	<text> 
+		<status value="generated"/> 
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h>Example Research Subject</h>
+			<ul>
+				<li>Step 1: pre-screening</li>
+				<li>Beginning of pre-screnning: 2018-01-01</li>
+				<li>Eligibility: did not consent on 2018-01-10</li>
+			</ul>
+		</div> 
+	</text> 
+	<id value="researchsubject-s1-2"/>
+	<meta>
+		<profile value="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-soa" />
+	</meta>
+	<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-status-history">
+		<extension url="status">
+			<valueCode value="candidate"/>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2018-01-01"/>
+			</valuePeriod>
+		</extension>
+	</extension>
+	<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-annotation">
+		<valueAnnotation>
+			<authorString value = "Dr. McCoy"/>
+			<time value="2018-01-10"/>
+			<text value="Patient did not consent because he didn't want to"/>
+		</valueAnnotation>
+	</extension>
+	<status value="withdrawn"/>
+	<period>
+		<start value="2018-01-01"/>
+		<end value="2018-01-10"/>
+	</period>
+	<study>
+		<reference value="ResearchStudy/researchstudy-soa-1"/>
+	</study>
+	<individual>
+		<reference value="Patient/patient-soa-1"/>
+	</individual>
+</ResearchSubject>
+
+

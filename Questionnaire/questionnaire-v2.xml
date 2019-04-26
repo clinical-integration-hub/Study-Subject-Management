@@ -1,0 +1,113 @@
+<Questionnaire xmlns="http://hl7.org/fhir">
+  <url value="http://clinicalsite.org/fhir/Questionnaire/CTF" />
+  <version value="V2" />
+  <name value="Clinical Trial Form" />
+  <status value="draft" />
+  <experimental value="true" />
+  <subjectType value="ResearchSubject" />
+  <!-- Group: Trial-->
+  <item>
+    <linkId value="g1" />
+    <text value="Trial" />
+    <type value="group" />
+    <!-- Question: Trial Title-->
+    <item>
+      <linkId value="q1.1" />
+      <text value="Trial Title" />
+      <type value="choice" />
+      <required value="true" />
+      <!-- needs reference to ValueSet containing IDs and name of all available Studies-->
+      <options>
+        <reference value="http://clinicalsite.org/fhir/ValueSet/study-catalog" />
+      </options>
+    </item>
+  </item>
+  <!--Group: Pre-Study Screening"-->
+  <item>
+    <linkId value="g2" />
+    <text value="Pre-Study Screening" />
+    <type value="group" />
+    <!-- Trial Title-->
+    <item>
+      <linkId value="q2.1" />
+      <text value="Screening ID" />
+      <type value="string" />
+    </item>
+  </item>
+  <!--Screening required? Could be prepopulated with Study attributes, when Study is picked or determined by FHIRPath expression looking into the Study attributes-->
+  <item>
+    <linkId value="q3" />
+    <text value="Screening required" />
+    <type value="boolean" />
+  </item>
+  <!--Group: Screening"-->
+  <item>
+    <linkId value="g3" />
+    <text value="Screening" />
+    <type value="group" />
+    <!-- display group only if q3 = true-->
+    <enableWhen>
+      <question value="q3" />
+      <answerBoolean value="true" />
+    </enableWhen>
+    <item>
+      <linkId value="q3.1" />
+      <text value="Screening ID" />
+      <type value="string" />
+    </item>
+    <item>
+      <linkId value="q3.2" />
+      <text value="Informed Consent Screening" />
+      <type value="date" />
+    </item>
+    <item>
+      <linkId value="q3.3" />
+      <text value="Eligibility" />
+      <type value="choice" />
+      <required value="true" />
+      <option>
+        <valueCoding>
+          <code value="P" />
+          <display value="Pending" />
+        </valueCoding>
+      </option>
+      <option>
+        <valueCoding>
+          <code value="DNF" />
+          <display value="Does not Fulfill criteria" />
+        </valueCoding>
+      </option>
+      <option>
+        <valueCoding>
+          <code value="DNC" />
+          <display value="Does not consent" />
+        </valueCoding>
+      </option>
+      <option>
+        <valueCoding>
+          <code value="Q" />
+          <display value="Qualifies" />
+        </valueCoding>
+      </option>
+    </item>
+    <!-- Comment required only upon withdrawal/ineligibility-->
+    <item>
+      <linkId value="q3.4" />
+      <text value="Comment" />
+      <type value="string" />
+      <enableWhen>
+        <question value="q3.3" />
+        <answerCoding>
+          <code value="DNF" />
+        </answerCoding>
+      </enableWhen>
+      <enableWhen>
+        <question value="q3.3" />
+        <answerCoding>
+          <code value="DNC" />
+        </answerCoding>
+      </enableWhen>
+      <required value="true" />
+    </item>
+  </item>
+</Questionnaire>

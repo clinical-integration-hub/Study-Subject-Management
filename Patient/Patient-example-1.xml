@@ -1,0 +1,24 @@
+<Patient xmlns="http://hl7.org/fhir">
+	<id value="patient-soa-1"/>
+  <meta>
+    <profile value="http://clinicalsite.org/fhir/StructureDefinition/patient-soa" />
+	<profile value="http://fhir.de/StructureDefinition/patient-de-basis" />
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203" />
+        <code value="MR" />
+      </coding>
+    </type>
+    <system value="http://uk-koeln.de/NamingSystem/patient-identifier" />
+    <value value="5885979" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Mustermann" />
+    <given value="Dika" />
+  </name>
+  <gender value="female" />
+  <birthdate value="1992-10-21" />
+</Patient>

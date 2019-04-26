@@ -1,0 +1,94 @@
+<ResearchSubject xmlns="http://hl7.org/fhir">
+	<id value="researchsubject-soa-3"/>
+	<meta>
+		<profile value="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-soa" />
+	</meta>
+	<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-status-history">
+		<extension url="status">
+			<valueCode value="potential-candidate"/>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2017-11-01"/>
+			</valuePeriod>
+		</extension>
+	</extension>
+	<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-status-history">
+		<extension url="status">
+			<valueCode value="candidate"/>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2017-12-01"/>
+			</valuePeriod>
+		</extension>
+	</extension>
+	<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-status-history">
+		<extension url="status">
+			<valueCode value="screening"/>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2017-12-07"/>
+			</valuePeriod>
+		</extension>
+	</extension>
+	<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-status-history">
+		<extension url="status">
+			<valueCode value="eligible"/>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2017-12-17"/>
+			</valuePeriod>
+		</extension>
+	</extension>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-identifier-type" />
+				<code value="SCREEN" />
+			</coding>
+		</type>
+		<system value="http://someTrialSponsor.org/NamingSystem/screening-identifier"/>
+		<value value="1973"/>
+	</identifier>
+	<!--
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-identifier-type" />
+				<code value="SUBJ" />
+			</coding>
+		</type>
+		<system value="http://someTrialSponsor.org/NamingSystem/researchsubject-identifier"/>
+		<value value="5467"/>
+	</identifier>
+	-->
+	<status value="completed">
+		<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-completion-status">
+			<valueCode value="regular"/>
+		</extension>
+	</status>
+	<period>
+		<start value="2017-12-01"/>
+	</period>
+	<study>
+		<reference value="ResearchStudy/researchstudy-soa-1"/>
+	</study>
+	<individual>
+		<reference value="Patient/patient-soa-1"/>
+	</individual>
+	<consent>
+		<reference value="Consent/consent-soa-1"/>
+		<extension url="http://clinicalsite.org/fhir/StructureDefinition/consent-annotation">
+			<valueAnnotation>
+				<text value="This is a comment about the consent"/>
+			</valueAnnotation>
+		</extension>
+	</consent>
+
+
+</ResearchSubject>
+
+

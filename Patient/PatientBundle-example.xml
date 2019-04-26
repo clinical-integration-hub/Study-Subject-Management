@@ -1,0 +1,48 @@
+{
+	"resourceType":"Bundle",
+	"type":"batch",
+	"id":"c5b2364b-f52c-4e84-731f-c088853ecb3b",
+	"entry":[
+		{
+			"fullUrl":"urn:uuid:7faf5f8c-826a-4f65-6265-820aa1873723",
+			"resource":{
+				"meta":{
+					"tag":[
+						{
+							"system":"http://DESKTOP-IHO9F6R/Cloverleaf/SourceMid",
+							"code":"0.0.252"
+						}
+					]
+				},
+				"resourceType":"Patient",
+				"identifier":[
+					{
+						"value":"5204266",
+						"system":"http://uk-koeln.de/NamingSystem/patient-identifier/Patient",
+						"assigner":{
+							"display":"Uniklinikum Köln"
+						}
+					}
+				],
+				"text":{
+					"div":"<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<table>\r\n<tr><td>Name:</td><td>Mustermann,Thomas</td></tr>\r\n<tr><td>Geburtsdatum:</td><td>06.07.1920</td></tr>\r\n<tr><td>ID:</td><td>5204266</td></tr>\r\n</table>\r\n</div>",
+					"status":"generated"
+				},
+				"name":[
+					{
+						"family":"Mustermann",
+						"given":[
+							"Thomas"
+						]
+					}
+				],
+				"birthDate":"1920-07-06",
+				"gender":"male"
+			},
+			"request":{
+				"method":"PUT",
+				"url":"Patient?identifier=http://uk-koeln.de/NamingSystem/patient-identifier/Patient|5204266"
+			}
+		}
+	]
+}

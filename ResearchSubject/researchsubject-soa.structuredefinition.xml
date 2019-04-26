@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-12-20T15:12:36.724+01:00" />
+  </meta>
+  <url value="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-soa" />
+  <name value="researchsubject-soa" />
+  <status value="draft" />
+  <date value="2017-12-12T17:15:09.041+01:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ResearchSubject" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ResearchSubject" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ResearchSubject.extension">
+      <path value="ResearchSubject.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ResearchSubject.extension:statusHistory">
+      <path value="ResearchSubject.extension" />
+      <sliceName value="statusHistory" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-status-history" />
+      </type>
+    </element>
+    <element id="ResearchSubject.extension:comment">
+      <path value="ResearchSubject.extension" />
+      <sliceName value="comment" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://clinicalsite.org/fhir/StructureDefinition/researchsubject-comment" />
+      </type>
+    </element>
+    <element id="ResearchSubject.identifier">
+      <path value="ResearchSubject.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.coding.code" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <comment value="In STU3, identifier is restricted to a maximum cardinality of 1. This is relaxed to * in R4.&#xD;&#xA;For this profile, two identifiers are requires to capture the Screening and the Subject ID." />
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.identifier.type">
+      <path value="ResearchSubject.identifier.type" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/identifier-type" />
+      </binding>
+    </element>
+    <element id="ResearchSubject.identifier.type.coding">
+      <path value="ResearchSubject.identifier.type.coding" />
+      <binding>
+        <strength value="extensible" />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/identifier-type" />
+      </binding>
+    </element>
+    <element id="ResearchSubject.identifier:ScreeningID">
+      <path value="ResearchSubject.identifier" />
+      <sliceName value="ScreeningID" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.identifier:ScreeningID.type">
+      <path value="ResearchSubject.identifier.type" />
+      <min value="1" />
+    </element>
+    <element id="ResearchSubject.identifier:ScreeningID.type.coding.system">
+      <path value="ResearchSubject.identifier.type.coding.system" />
+      <fixedUri value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-identifier-type" />
+    </element>
+    <element id="ResearchSubject.identifier:ScreeningID.type.coding.code">
+      <path value="ResearchSubject.identifier.type.coding.code" />
+      <fixedCode value="SCREEN" />
+    </element>
+    <element id="ResearchSubject.identifier:ScreeningID.value">
+      <path value="ResearchSubject.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ResearchSubject.identifier:SubjectID">
+      <path value="ResearchSubject.identifier" />
+      <sliceName value="SubjectID" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.identifier:SubjectID.type">
+      <path value="ResearchSubject.identifier.type" />
+      <min value="1" />
+    </element>
+    <element id="ResearchSubject.identifier:SubjectID.type.coding.system">
+      <path value="ResearchSubject.identifier.type.coding.system" />
+      <fixedUri value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-identifier-type" />
+    </element>
+    <element id="ResearchSubject.identifier:SubjectID.type.coding.code">
+      <path value="ResearchSubject.identifier.type.coding.code" />
+      <fixedCode value="SUBJ" />
+    </element>
+    <element id="ResearchSubject.identifier:SubjectID.value">
+      <path value="ResearchSubject.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ResearchSubject.status">
+      <path value="ResearchSubject.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.period">
+      <path value="ResearchSubject.period" />
+      <short value="Start and end of clinical trial process" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.period.start">
+      <path value="ResearchSubject.period.start" />
+      <min value="1" />
+    </element>
+    <element id="ResearchSubject.study">
+      <path value="ResearchSubject.study" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://clinicalsites.org/fhir/StructureDefinition/researchstudy-soa" />
+        <aggregation value="referenced" />
+        <aggregation value="bundled" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.study.reference">
+      <path value="ResearchSubject.study.reference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.individual">
+      <path value="ResearchSubject.individual" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://clinicalsite.org/fhir/StructureDefinition/patient-soa" />
+        <aggregation value="referenced" />
+        <aggregation value="bundled" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.individual.reference">
+      <path value="ResearchSubject.individual.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ResearchSubject.assignedArm">
+      <path value="ResearchSubject.assignedArm" />
+      <max value="0" />
+    </element>
+    <element id="ResearchSubject.actualArm">
+      <path value="ResearchSubject.actualArm" />
+      <max value="0" />
+    </element>
+    <element id="ResearchSubject.consent">
+      <path value="ResearchSubject.consent" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://clinicalsite.org/fhir/StructureDefinition/consent-soa" />
+        <aggregation value="referenced" />
+        <aggregation value="contained" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

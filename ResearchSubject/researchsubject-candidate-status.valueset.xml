@@ -1,0 +1,32 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<url value="http://clinicalsite.org/fhir/ValueSet/researchsubject-candidate-status" />
+	<name value="researchsubject-candidate-status" />
+	<status value="draft" />
+	<date value="2017-12-12" />
+	<publisher value="clinicalsite.org" />
+	<description value="Pre-screening status values" />
+	<expansion>
+		<identifier value="d1ca2c0e-4e00-4c6a-7d94-1e9499fc4241" />
+		<timestamp value="2017-12-12" />
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-candidate-status" />
+			<code value="qualifies" />
+			<display value="qualifies" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-candidate-status" />
+			<code value="pending" />
+			<display value="pending" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-candidate-status" />
+			<code value="no-fulfill" />
+			<display value="does not fulfil criteria" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-candidate-status" />
+			<code value="no-consent" />
+			<display value="did not consent" />
+		</contains>
+	</expansion>
+</ValueSet>

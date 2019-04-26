@@ -1,0 +1,22 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<url value="http://clinicalsite.org/fhir/ValueSet/researchsubject-identifier-type" />
+	<name value="researchsubject-identifier-type" />
+	<status value="draft" />
+	<date value="2017-12-20" />
+	<publisher value="clinicalsite.org" />
+	<description value="Research subject identifier type codes" />
+	<expansion>
+		<identifier value="d1ca2c0e-4e00-4c6a-7d94-1e9499fc4241" />
+		<timestamp value="2017-12-19" />
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-identifier-type" />
+			<code value="SCREEN" />
+			<display value="screening ID" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-identifier-type" />
+			<code value="SUBJ" />
+			<display value="subject ID" />
+		</contains>
+	</expansion>
+</ValueSet>

@@ -1,0 +1,59 @@
+<ResearchStudy xmlns="http://hl7.org/fhir">
+	<id value="researchstudy-soa-2"/>
+	<meta>
+		<profile value="http://clinicalsite.org/fhir/StructureDefinition/researchstudy-soa" />
+	</meta>
+	<identifier>
+		<system value="http://clinicalsite.org/fhir/NamingSystem/researchstudy-identifier"/>
+		<value value="1973"/>
+	</identifier>
+	<title value="Eine Placcebo-kontrollierte, doppelblinde, randomisierte, multizentrische, dreiarmige Phase-III-Studie..."/>
+
+	<status value="in-progress">
+
+	</status>
+	<description value="Eine prospektive, offene, multizentrische, randomisierte Phase-III-Studie zum Vergleich der Wirksamkeit und Sicherheit einer kombinierten Therapie von Obinutuzumab und GDC-0199 (ABT-199) versus Obinutuzumab und Chlorambucil bei zuvor unbehandelten Patienten mit CLL und Begleiterkrankungen"/>
+	<period>
+		<start value="2017-12-14"/>
+	</period>
+	<sponsor>
+		<display value="F. Hoffmann-La Roche AG"/>
+	</sponsor>
+	<principalInvestigator>
+		<display value="Dr. med. Petra Langerbeins"/>
+	</principalInvestigator>
+
+	<site>
+		<identifier>
+			<system value="http://clinicalsite.org/fhir/NamingSystem/site-identifier"/>
+			<value value="53"/>
+		</identifier>
+		<display value="Klinik I für Innere Medizin (Uniklinik Köln)"/>
+		<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchstudy-status-detail">
+			<valueCode value="2"/>
+		</extension>
+
+		<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchstudy-office">
+			<extension url="head">
+				<valueReference>
+					<identifier>
+						<system value="http://clinicalsite.org/fhir/NamingSystem/person-identifier"/>
+						<value value="150"/>
+					</identifier>
+					<display value="PH Dr. med. Thomas Zander"/>
+				</valueReference>
+			</extension>
+			<extension url="org">
+				<valueReference>
+					<identifier>
+						<system value="http://clinicalsite.org/fhir/NamingSystem/site-identifier"/>
+						<value value="10"/>
+					</identifier>
+					<display value="Klinisches Studienzentrum der Klinik I für Innere Medizin Köln (UK Köln)"/>
+				</valueReference>
+			</extension>
+		</extension>
+
+	</site>
+</ResearchStudy>
+

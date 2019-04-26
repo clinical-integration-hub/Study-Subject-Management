@@ -1,0 +1,36 @@
+<ResearchStudy xmlns="http://hl7.org/fhir">
+	<id value="researchstudy-soa-1"/>
+	<meta>
+		<profile value="http://clinicalsite.org/fhir/StructureDefinition/researchstudy-soa" />
+	</meta>
+	<identifier>
+		<system value="http://clinicalsite.org/fhir/NamingSystem/researchstudy-identifier"/>
+		<value value="2371"/>
+	</identifier>
+	<title value="CLL14 BO25323"/>
+
+	<status value="in-progress">
+		<extension url="http://clinicalsite.org/fhir/StructureDefinition/researchstudy-status-detail">
+			<valueCode value="2"/>
+		</extension>
+	</status>
+	<description value="Eine prospektive, offene, multizentrische, randomisierte Phase-III-Studie zum Vergleich der Wirksamkeit und Sicherheit einer kombinierten Therapie von Obinutuzumab und GDC-0199 (ABT-199) versus Obinutuzumab und Chlorambucil bei zuvor unbehandelten Patienten mit CLL und Begleiterkrankungen"/>
+	<period>
+		<start value="2017-12-14"/>
+	</period>
+	<sponsor>
+		<display value="F. Hoffmann-La Roche AG"/>
+	</sponsor>
+	<principalInvestigator>
+		<display value="Univ.-Prof. Dr. med. Michael Hallek"/>
+	</principalInvestigator>
+
+	<site>
+		<identifier>
+			<system value="http://clinicalsite.org/fhir/NamingSystem/site-identifier"/>
+			<value value="53"/>
+		</identifier>
+		<display value="Klinik I für Innere Medizin (Uniklinik Köln)"/>
+	</site>
+</ResearchStudy>
+

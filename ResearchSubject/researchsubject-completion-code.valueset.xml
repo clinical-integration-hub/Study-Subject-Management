@@ -1,0 +1,52 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<url value="http://clinicalsite.org/fhir/ValueSet/researchsubject-completion-code" />
+	<name value="researchsubject-completion-code" />
+	<status value="draft" />
+	<date value="2017-12-20" />
+	<publisher value="clinicalsite.org" />
+	<description value="Research subject completion codes" />
+	<expansion>
+		<identifier value="d1ca2c0e-4e00-4c6a-7d94-1e9499fc4241" />
+		<timestamp value="2017-12-19" />
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-completion-code" />
+			<code value="regular" />
+			<display value="regular completion" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-completion-code" />
+			<code value="consent-withdrawal" />
+			<display value="consent withdrawal" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-completion-code" />
+			<code value="non-compliance" />
+			<display value="non-compliance" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-completion-code" />
+			<code value="death" />
+			<display value="death" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-completion-code" />
+			<code value="adverse-event" />
+			<display value="adverse event" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-completion-code" />
+			<code value="medical" />
+			<display value="medical reasons" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-completion-code" />
+			<code value="other" />
+			<display value="other reasons" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchsubject-completion-code" />
+			<code value="failure" />
+			<display value="screening failure" />
+		</contains>
+	</expansion>
+</ValueSet>

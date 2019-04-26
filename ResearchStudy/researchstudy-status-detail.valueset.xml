@@ -1,0 +1,62 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<url value="http://clinicalsite.org/fhir/ValueSet/researchstudy-status-detail" />
+	<name value="researchstudy-status-detail" />
+	<status value="draft" />
+	<date value="2017-12-14" />
+	<publisher value="Clinicalsite.org" />
+	<description value="detailed study status values" />
+	<expansion>
+		<identifier value="d1ca2c0e-4e00-4c6a-7d94-1e9499fc4241" />
+		<timestamp value="2017-12-14" />
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="1" />
+			<display value="Geplant (Studienkommission)" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="2" />
+			<display value="Aktiv" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="3" />
+			<display value="Planmäßig beendet" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="4" />
+			<display value="Abgelehnt" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="5" />
+			<display value="Geplant (Transit Ethik)" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="6" />
+			<display value="Unplanmäßig beendet" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="7" />
+			<display value="Geplant" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="8" />
+			<display value="Vor Aktivierung beendet" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="9" />
+			<display value="Aktiv (Rekrutierung geschlossen)" />
+		</contains>
+		<contains>
+			<system value="http://clinicalsite.org/fhir/CodeSystem/researchstudy-status-detail" />
+			<code value="10" />
+			<display value="Geplant (Transit Ethik), pub." />
+		</contains>
+	</expansion>
+</ValueSet>
